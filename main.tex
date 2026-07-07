@@ -1,0 +1,216 @@
+%-------------------------
+% Jake's Resume Template – Adapted for Muhammad Umar Yaksambi
+% Based on: https://github.com/jakegut/resume
+% Refined per r/EngineeringResumes wiki guidelines
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{lmodern}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% NOTE: Wiki guidance says LinkedIn links are generally unnecessary (recruiters
+% will search your name if interested) and that non-local city/location and
+% phone numbers can introduce implicit bias. These are US/Canada-centric norms;
+% since Indian tech recruiting commonly expects location + phone + LinkedIn,
+% I've kept location/phone but removed LinkedIn from the visible header per the
+% wiki -- uncomment below if you'd rather keep it.
+\begin{center}
+    \textbf{\Huge \scshape Muhammad Umar Yaksambi} \\ \vspace{1pt}
+    \small Bangalore, IN $|$
+    \href{mailto:umaryaksambi@gmail.com}{umaryaksambi@gmail.com} $|$
+    +91 99025 78332
+    \\
+    \mbox{
+    \href{https://linkedin.com/in/UmarYaksambi}{linkedin.com/in/UmarYaksambi} $|$
+    \href{https://github.com/umaryaksambi}
+    {github.com/umaryaksambi} $|$
+    \href{https://umaryaksambi.vercel.app}
+    {umaryaksambi.vercel.app}
+    }
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {RV College of Engineering}{Bengaluru, KA}
+      {BE, Computer Science and Engineering (Data Sciences) -- CGPA: 9.12/10}{Expected May 2027}
+    % NOTE: Pre-university / high school correctly excluded per wiki guidelines
+    % (don't include schools from which you did not receive a degree).
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {HPE CPP3 Intern}{March 2026 -- Present}
+    {Hewlett Packard Enterprise}{Remote}
+        \resumeItemListStart
+          \resumeItem{Built a hybrid defect-mapping engine combining a 50/50 lexical and semantic scoring model with \texttt{BAAI/bge-small-en-v1.5} embeddings to link CI failures to Jira issues, extending it with a 0.90 cosine-similarity duplicate-detection layer within 7-day proximity windows}
+          \resumeItem{Optimized concurrent read/write database performance by implementing SQLite Write-Ahead Logging (WAL) and a 32MB cache extension, eliminating dashboard lockups during active pipeline ingestion}
+          \resumeItem{Implemented a fault-tolerant REST API integration layer with idempotent write-backs and exponential backoff retry logic to safely interact with Atlassian's systems under rate limits}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Developer Intern}{June 2025 -- March 2026}
+      {SpikedAI}{Remote}
+      \resumeItemListStart
+        \resumeItem{Architected event-driven backend services using FastAPI and Node.js, achieving a sustained 500 RPS throughput to support 500+ concurrent users for a sales meeting intelligence platform}
+        \resumeItem{Optimized RAG and GraphQL pipelines to deliver a 750ms end-to-end response time against an indexed knowledge base of 100M+ tokens, scaling system throughput to >1 million tokens per minute}
+        \resumeItem{Engineered multi-cloud infrastructure across AWS and GCP, orchestrating CI/CD pipelines via GitHub Actions and Nginx load balancing to ensure 99.9\% service uptime in production}
+        \resumeItem{Built responsive user interfaces leveraging React, TypeScript, and Tailwind CSS, integrating Redis caching to accelerate the delivery of actionable sales insights generated from Google Meet transcripts}
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {PRISM Research Intern}{May 2025 -- January 2026}
+    {Samsung R\&D Institute}{Bengaluru, KA}
+      \resumeItemListStart
+        \resumeItem{Engineered a real-time volumetric rendering pipeline for a 3D Gaussian Splatting PLY viewer using the Filament engine, achieving 30 FPS at 1080p resolution on Dimensity 9000 mobile hardware}
+        \resumeItem{Optimized spherical harmonics processing and matc material compilation to handle complex spatial datasets, successfully rendering large-scale scenes comprising over 3 million Gaussians}
+        \resumeItem{Developed dynamic lighting capabilities for mobile spatial rendering, enabling real-time rasterization of 3D environments previously too computationally heavy for traditional ray-marching}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\href{https://github.com/umaryaksambi/iot-jamming-defense}{\textbf{Adaptive Defenses for Wireless IoT Networks}} $|$ \emph{Python, Game Theory, Q-Learning}}
+          {}
+          \resumeItemListStart
+            \resumeItem{Developed and simulated dynamic defense strategies for IoT networks using game-theoretic models and Q-learning to counter jamming attacks, achieving a 7\% performance improvement over static baselines}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\href{https://github.com/umaryaksambi/federated-healthcare-llm}{\textbf{Federated Learning with DP for Healthcare Recommendations}} $|$ \emph{Flower, TFF, PyTorch, Llama-7B}}
+          {}
+          \resumeItemListStart
+            \resumeItem{Built a privacy-preserving healthcare chatbot using federated learning and differential privacy, retaining patient history locally while continuously improving a global Llama-7B quantized model}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\href{https://github.com/umaryaksambi/disaster-communication-mesh}{\textbf{Resilient Disaster Communication Framework}} $|$ \emph{Embedded C, ESP32, ESP-NOW}}
+          {}
+          \resumeItemListStart
+            \resumeItem{Designed an ESP32-based opportunistic mesh and mobile relay system for infrastructure-independent disaster communication, integrating 5 sensors for proactive environmental hazard prediction}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+%-----------LEADERSHIP AND ACTIVITIES-----------
+\section{Leadership and Activities}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Vice President}{February 2025 -- Present}
+      {The Coding Club of RVCE}{Bengaluru, KA}
+      \resumeItemListStart
+        \resumeItem{Organized events and workshops for 200+ students, mentored juniors in C++, Python, and ML, and led sessions on APIs, LLMs, and competitive programming at RVITM and RVCE}
+        % TODO: Replace 200+ with actual attendance figure if known.
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, TypeScript, SQL, Embedded C} \\
+     \textbf{Frameworks \& Libraries}{: PyTorch, TensorFlow, FastAPI, Node.js, React, Next.js, LangChain, GraphQL} \\
+     \textbf{Cloud \& DevOps}{: AWS, GCP, Kubernetes, Docker, GitHub Actions, Nginx} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, Redis, Qdrant, ChromaDB}
+    }}
+  \end{itemize}
+
+%-------------------------------------------
+\end{document}
