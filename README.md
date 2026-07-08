@@ -30,10 +30,9 @@
 ### CPP3 Intern
 **March 2026 – Present | Remote**
 
-- Built a hybrid defect-mapping engine combining lexical and semantic retrieval using **BAAI/bge-small-en-v1.5** embeddings to map CI failures to Jira issues.
-- Implemented a **0.90 cosine similarity** duplicate-detection layer for identifying recurring defects within rolling 7-day windows.
-- Improved database concurrency by enabling **SQLite WAL** and expanding cache capacity to **32 MB**, eliminating dashboard lockups.
-- Developed resilient REST integrations with **idempotent writes**, **rate-limit awareness**, and **exponential backoff** retry logic.
+- Built a hybrid defect-mapping engine combining a 50/50 lexical and semantic scoring model with **BAAI/bge-small-en-v1.5** embeddings to link CI failures to Jira issues, extending it with a **0.90 cosine-similarity** duplicate-detection layer within 7-day proximity windows.
+- Optimized concurrent read/write database performance by implementing **SQLite Write-Ahead Logging (WAL)** and a **32MB** cache extension, eliminating dashboard lockups during active pipeline ingestion.
+- Implemented a fault-tolerant REST API integration layer with **idempotent write-backs** and **exponential backoff** retry logic to safely interact with Atlassian's systems under rate limits.
 
 ---
 
@@ -41,10 +40,10 @@
 ### Product Developer Intern
 **June 2025 – March 2026 | Remote**
 
-- Architected backend microservices using **FastAPI** and **Node.js**, sustaining **500 RPS** while supporting **500+ concurrent users**.
-- Optimized **RAG** and **GraphQL** pipelines to achieve **750 ms** response latency over **100M+ indexed tokens**.
-- Designed cloud infrastructure across **AWS** and **Google Cloud Platform**, deploying CI/CD with **GitHub Actions**, **Docker**, and **Nginx** while maintaining **99.9% uptime**.
-- Developed modern React interfaces with **TypeScript**, **Tailwind CSS**, and **Redis** to deliver AI-powered sales insights from meeting transcripts.
+- Architected event-driven backend services using **FastAPI** and **Node.js**, achieving a sustained **500 RPS** throughput to support **500+ concurrent users** for a sales meeting intelligence platform.
+- Optimized **RAG** and **GraphQL** pipelines to deliver a **750ms** end-to-end response time against an indexed knowledge base of **100M+ tokens**, scaling system throughput to **>1 million tokens per minute**.
+- Engineered multi-cloud infrastructure across **AWS** and **GCP**, orchestrating CI/CD pipelines via **GitHub Actions** and **Nginx** load balancing to ensure **99.9%** service uptime in production.
+- Built responsive user interfaces leveraging **React**, **TypeScript**, and **Tailwind CSS**, integrating **Redis** caching to accelerate the delivery of actionable sales insights generated from Google Meet transcripts.
 
 ---
 
@@ -52,38 +51,38 @@
 ### PRISM Research Intern
 **May 2025 – January 2026 | Bengaluru**
 
-- Engineered a real-time **3D Gaussian Splatting** renderer using **Filament**, achieving **30 FPS at 1080p** on **Dimensity 9000** hardware.
-- Optimized spherical harmonics and material pipelines to render scenes containing **3M+ Gaussian primitives**.
-- Implemented dynamic lighting techniques enabling high-performance mobile spatial rendering.
+- Built a real-time volumetric rendering pipeline for a **3D Gaussian Splatting** PLY viewer using the **Filament** engine, achieving **30 FPS at 1080p** on **Dimensity 9000** mobile hardware with dynamic lighting support, replacing computationally heavy traditional ray-marching.
+- Optimized spherical harmonics processing and `matc` material compilation to render large-scale scenes comprising over **3 million Gaussians** on mobile hardware.
 
 ---
 
 # 🚀 Featured Projects
 
-## 🛰️ Adaptive Defenses for Wireless IoT Networks
-**Python • Game Theory • Q-Learning**
+## 🎓 Thrive Learning Platform
+**Next.js • TypeScript • Supabase • PostgreSQL • OpenAI • Gemini API • PWA**
 
-🔗 https://github.com/umaryaksambi/iot-jamming-defense
+🔗 https://github.com/UmarYaksambi/thrive
 
-- Simulated adaptive anti-jamming strategies using **Bayesian Games** and **Q-Learning**, improving network resilience by **7%** over static baselines.
-
----
-
-## 🏥 Federated Learning with Differential Privacy for Healthcare Recommendations
-**Flower • TensorFlow Federated • PyTorch • Llama-7B**
-
-🔗 https://github.com/umaryaksambi/federated-healthcare-llm
-
-- Built a privacy-preserving healthcare chatbot using **Federated Learning** and **Differential Privacy**, enabling collaborative model training without exposing patient data.
+- Engineered an offline-first educational PWA with **Next.js** and **Supabase**, integrating **OpenAI** and **Gemini** to deliver dynamic curricula, 3D visuals, and a context-aware tutor with local caching and RBAC.
 
 ---
 
-## 🌐 Resilient Disaster Communication Framework
-**Embedded C • ESP32 • ESP-NOW**
+## 🛡️ Adaptive-ECC Watermarking for AI Images
+**Python • OpenCV • Cryptography**
 
-🔗 https://github.com/umaryaksambi/disaster-communication-mesh
+🔗 https://github.com/UmarYaksambi/Adaptive-ECC-Watermark-AI-Images
 
-- Developed an **ESP32 mesh communication network** with five environmental sensors for infrastructure-independent disaster communication and hazard prediction.
+- Developed an invisible, adaptive watermarking algorithm for AI images using **Error Correction Codes (ECC)** that scales intensity by local complexity to protect intellectual property while preserving visual fidelity.
+- *Currently Under Review: Multimedia Tools and Applications (MTAP), Springer*
+
+---
+
+## 🏥 MedQuery
+**React • TypeScript • Python • FastAPI • LLMs • Tailwind CSS**
+
+🔗 https://github.com/umaryaksambi/medquery
+
+- Architected a full-stack clinical platform using **React** and **FastAPI**, integrating **LLMs** to enable healthcare professionals to query the MIMIC-IV dataset via natural language with secure RBAC and interactive analytics.
 
 ---
 
@@ -91,11 +90,10 @@
 
 ## 👨‍💻 The Coding Club of RVCE
 ### Vice President
-**February 2025 – Present**
+**February 2025 – Present | Bengaluru**
 
-- Organized technical events and workshops for **200+ students**.
-- Mentored juniors in **Python**, **C++**, **Machine Learning**, and **Competitive Programming**.
-- Conducted workshops on **LLMs**, **APIs**, and **AI application development** at **RVCE** and **RVITM**.
+- Led a community of **300+ students** as Vice President of the Coding Club at RVCE, organizing **15+ technical events**, including hackathons, workshops, and coding competitions that engaged **1,000+ participants**.
+- Mentored students in **software development**, **AI**, and **competitive programming** while collaborating with faculty, student leaders, and industry partners to strengthen the campus developer community.
 
 ---
 
@@ -104,10 +102,9 @@
 | Category | Technologies |
 |-----------|--------------|
 | 💻 **Languages** | Python, C++, TypeScript, SQL, Embedded C |
-| ⚡ **Frameworks** | FastAPI, React, Next.js, Node.js, LangChain, GraphQL |
-| 🤖 **AI / ML** | PyTorch, TensorFlow, LLMs, RAG, Q-Learning |
-| ☁️ **Cloud & DevOps** | AWS, GCP, Docker, Kubernetes, GitHub Actions, Nginx |
-| 🗄️ **Databases** | PostgreSQL, MongoDB, Redis, ChromaDB, Qdrant |
+| ⚡ **Frameworks & Libraries** | PyTorch, TensorFlow, FastAPI, Node.js, React, Next.js, LangChain, GraphQL |
+| ☁️ **Cloud & DevOps** | AWS, GCP, Kubernetes, Docker, GitHub Actions, Nginx |
+| 🗄️ **Databases** | PostgreSQL, MongoDB, Redis, Qdrant, ChromaDB |
 
 ---
 
@@ -115,8 +112,8 @@
 
 ### 📫 Let's Connect!
 
-[Portfolio](https://umaryaksambi.vercel.app) •
-[GitHub](https://github.com/umaryaksambi) •
+[Portfolio](https://umaryaksambi.vercel.app) • 
+[GitHub](https://github.com/umaryaksambi) • 
 [LinkedIn](https://linkedin.com/in/UmarYaksambi)
 
 </div>
