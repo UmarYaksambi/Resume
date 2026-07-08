@@ -30,7 +30,7 @@
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.8in}
-\addtolength{\textheight}{1.3in}
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -141,8 +141,11 @@
       {SpikedAI}{Remote}
       \resumeItemListStart
         \resumeItem{Architected event-driven backend services using FastAPI and Node.js, achieving a sustained 500 RPS throughput to support 500+ concurrent users for a sales meeting intelligence platform}
+
         \resumeItem{Optimized RAG and GraphQL pipelines to deliver a 750ms end-to-end response time against an indexed knowledge base of 100M+ tokens, scaling system throughput to >1 million tokens per minute}
+
         \resumeItem{Engineered multi-cloud infrastructure across AWS and GCP, orchestrating CI/CD pipelines via GitHub Actions and Nginx load balancing to ensure 99.9\% service uptime in production}
+
         \resumeItem{Built responsive user interfaces leveraging React, TypeScript, and Tailwind CSS, integrating Redis caching to accelerate the delivery of actionable sales insights generated from Google Meet transcripts}
       \resumeItemListEnd
 
@@ -150,9 +153,8 @@
     {PRISM Research Intern}{May 2025 -- January 2026}
     {Samsung R\&D Institute}{Bengaluru, KA}
       \resumeItemListStart
-        \resumeItem{Engineered a real-time volumetric rendering pipeline for a 3D Gaussian Splatting PLY viewer using the Filament engine, achieving 30 FPS at 1080p resolution on Dimensity 9000 mobile hardware}
-        \resumeItem{Optimized spherical harmonics processing and matc material compilation to handle complex spatial datasets, successfully rendering large-scale scenes comprising over 3 million Gaussians}
-        \resumeItem{Developed dynamic lighting capabilities for mobile spatial rendering, enabling real-time rasterization of 3D environments previously too computationally heavy for traditional ray-marching}
+        \resumeItem{Built a real-time volumetric rendering pipeline for a 3D Gaussian Splatting PLY viewer using the Filament engine, achieving 30 FPS at 1080p on Dimensity 9000 mobile hardware with dynamic lighting support, replacing computationally heavy traditional ray-marching}
+        \resumeItem{Optimized spherical harmonics processing and \texttt{matc} material compilation to render large-scale scenes comprising over 3 million Gaussians on mobile hardware}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -162,29 +164,36 @@
 \section{Projects}
     \resumeSubHeadingListStart
 
-      \resumeProjectHeading
-          {\href{https://github.com/umaryaksambi/iot-jamming-defense}{\textbf{Adaptive Defenses for Wireless IoT Networks}} $|$ \emph{Python, Game Theory, Q-Learning}}
-          {}
-          \resumeItemListStart
-            \resumeItem{Developed and simulated dynamic defense strategies for IoT networks using game-theoretic models and Q-learning to counter jamming attacks, achieving a 7\% performance improvement over static baselines}
-          \resumeItemListEnd
+        \resumeProjectHeading
+            {\href{https://github.com/UmarYaksambi/thrive}{\textbf{Thrive Learning Platform}} $|$ \emph{Next.js, TypeScript, Supabase, PostgreSQL, OpenAI, Gemini API, PWA}}
+            {}
+            \resumeItemListStart
+              \resumeItem{Engineered an offline-first educational PWA with Next.js and Supabase, integrating OpenAI and Gemini to deliver dynamic curricula, 3D visuals, and a context-aware tutor with local caching and RBAC}
+            \resumeItemListEnd
 
-      \resumeProjectHeading
-          {\href{https://github.com/umaryaksambi/federated-healthcare-llm}{\textbf{Federated Learning with DP for Healthcare Recommendations}} $|$ \emph{Flower, TFF, PyTorch, Llama-7B}}
-          {}
-          \resumeItemListStart
-            \resumeItem{Built a privacy-preserving healthcare chatbot using federated learning and differential privacy, retaining patient history locally while continuously improving a global Llama-7B quantized model}
-          \resumeItemListEnd
+        \resumeProjectHeading
+            {\href{https://github.com/UmarYaksambi/Adaptive-ECC-Watermark-AI-Images}{\textbf{Adaptive-ECC Watermarking for AI Images}} $|$ \emph{Python, OpenCV, Cryptography}}
+            {}
+            \resumeItemListStart
+              \resumeItem{Developed an invisible, adaptive watermarking algorithm for AI images using Error Correction Codes (ECC) that scales intensity by local complexity to protect intellectual property while preserving visual fidelity}
+              \resumeItem{Currently Under Review: \emph{Multimedia Tools and Applications (MTAP), Springer}}
+            \resumeItemListEnd
 
-      \resumeProjectHeading
-          {\href{https://github.com/umaryaksambi/disaster-communication-mesh}{\textbf{Resilient Disaster Communication Framework}} $|$ \emph{Embedded C, ESP32, ESP-NOW}}
-          {}
-          \resumeItemListStart
-            \resumeItem{Designed an ESP32-based opportunistic mesh and mobile relay system for infrastructure-independent disaster communication, integrating 5 sensors for proactive environmental hazard prediction}
-          \resumeItemListEnd
+        \resumeProjectHeading
+            {\href{https://github.com/umaryaksambi/medquery}{\textbf{MedQuery}} $|$ \emph{React, TypeScript, Python, FastAPI, LLMs, Tailwind CSS}}
+            {}
+            \resumeItemListStart
+              \resumeItem{Architected a full-stack clinical platform using React and FastAPI, integrating LLMs to enable healthcare professionals to query the MIMIC-IV dataset via natural language with secure RBAC and interactive analytics}
+            \resumeItemListEnd
 
     \resumeSubHeadingListEnd
 
+%-----------PUBLICATIONS-----------
+% \section{Publications}
+%   \resumeSubHeadingListStart
+%     \resumeItem{\textbf{Adaptive ECC Allocation for Robust Watermarking of AI-Generated Images}: texture-aware Reed--Solomon coding in the DCT domain with geometric synchronization -- \textit{Multimedia Tools and Applications (MTAP), Springer} (Under Review)}
+%     \resumeItem{\textbf{Physics-Informed Federated Learning for RUL Prediction with Weibull Augmentation and Distribution-Similarity Aggregation} -- \textit{IEEE Open Journal of the Industrial Electronics Society} (Under Review)}
+%   \resumeSubHeadingListEnd
 
 %-----------LEADERSHIP AND ACTIVITIES-----------
 \section{Leadership and Activities}
@@ -194,8 +203,12 @@
       {Vice President}{February 2025 -- Present}
       {The Coding Club of RVCE}{Bengaluru, KA}
       \resumeItemListStart
-        \resumeItem{Organized events and workshops for 200+ students, mentored juniors in C++, Python, and ML, and led sessions on APIs, LLMs, and competitive programming at RVITM and RVCE}
-        % TODO: Replace 200+ with actual attendance figure if known.
+        \resumeItem{
+        Led a community of \textbf{300+ students} as Vice President of the Coding Club at RVCE, organizing \textbf{15+ technical events}, including hackathons, workshops, and coding competitions that engaged \textbf{1,000+ participants}.
+        }
+        \resumeItem{
+        Mentored students in software development, AI, and competitive programming while collaborating with faculty, student leaders, and industry partners to strengthen the campus developer community.
+        }
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -208,7 +221,7 @@
      \textbf{Languages}{: Python, C++, TypeScript, SQL, Embedded C} \\
      \textbf{Frameworks \& Libraries}{: PyTorch, TensorFlow, FastAPI, Node.js, React, Next.js, LangChain, GraphQL} \\
      \textbf{Cloud \& DevOps}{: AWS, GCP, Kubernetes, Docker, GitHub Actions, Nginx} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, Redis, Qdrant, ChromaDB}
+     \textbf{Databases}{: PostgreSQL, MongoDB, Redis, Qdrant, ChromaDB}\\
     }}
   \end{itemize}
 
